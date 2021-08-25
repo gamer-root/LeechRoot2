@@ -138,4 +138,4 @@ async def button(bot, update: CallbackQuery):
         await bot.answer_callback_query(
             update.id, text="trying to cancel...", show_alert=False
         )
-        await update.message.edit_text("Okay! fine 🤬")
+        await update.message.edit_text("Okay! fine 🙃")

@@ -54,9 +54,9 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     credit = await message.reply_text(
-        f"🧲𝙇𝙚𝙚𝙘𝙝𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪<a href='tg://user?id={g_id}'>⚡</a>", parse_mode="html"
+        f"🧲𝐿𝑒𝑒𝑐𝒉𝑖𝑛𝑔 𝐹𝑜𝑟 𝑌𝑜𝑢<a href='tg://user?id={g_id}'>⚡</a>", parse_mode="html"
     )
-    i_m_sefg = await message.reply_text("processing...", quote=True)
+    i_m_sefg = await message.reply_text("🤖processing...", quote=True)
     # get link from the incoming message
     if message.reply_to_message:
         dl_url, cf_name, _, _ = await extract_link(message.reply_to_message, "LEECH")
@@ -67,10 +67,10 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
         cf_name = None
     else:
-        await i_m_sefg.edit("👺𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙👺")
+        await i_m_sefg.edit("💩𝑵𝒐 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒗𝒊𝒅𝒆𝒅💩")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("⚡𝙚𝙭𝙩𝙧𝙖𝙘𝙩𝙞𝙣𝙜 𝙡𝙞𝙣𝙠𝙨🧲")
+        await i_m_sefg.edit_text("🔎𝕰𝖝𝖙𝖗𝖆𝖈𝖙𝖎𝖓𝖌 𝕷𝖎𝖓𝖐𝖘🔍")
         # start the aria2c daemon
         aria_i_p = await aria_start()
         # LOGGER.info(aria_i_p)
@@ -82,7 +82,7 @@ async def incoming_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("⏬𝙏𝙍𝙔𝙄𝙉𝙂 𝙏𝙊 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿🧲")
+        await i_m_sefg.edit_text("⚡𝕯𝖔𝖜𝖓𝖑𝖔𝖆𝖉𝖎𝖓𝖌⚡")
         # try to download the "link"
         is_zip = False
         is_cloud = False
@@ -127,10 +127,10 @@ async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     current_user_id = message.from_user.id
     credit = await message.reply_text(
-        f"<a href='tg://user?id={current_user_id}'>▶ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙏𝙝𝙚 𝙔𝙤𝙪𝙩𝙪𝙗𝙚 𝙁𝙞𝙡𝙚 𝙛𝙤𝙧 𝙮𝙤𝙪 ⚡</a>",
+        f"<a href='tg://user?id={current_user_id}'>▶ 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝙵𝚛𝚘𝚖 𝚈𝚘𝚞𝚃𝚞𝚋𝚎 ⚡</a>",
         parse_mode="html",
     )
-    i_m_sefg = await message.reply_text("⚡𝙥𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜⚡", quote=True)
+    i_m_sefg = await message.reply_text("❀Processing❀", quote=True)
     # LOGGER.info(message)
     # extract link from message
     if message.reply_to_message:
@@ -147,10 +147,10 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("👺𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙👺")
+        await i_m_sefg.edit("💩𝑵𝒐 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒗𝒊𝒅𝒆𝒅💩")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("⚡𝙚𝙭𝙩𝙧𝙖𝙘𝙩𝙞𝙣𝙜 𝙡𝙞𝙣𝙠𝙨🧲")
+        await i_m_sefg.edit_text("🔎𝕰𝖝𝖙𝖗𝖆𝖈𝖙𝖎𝖓𝖌 𝕷𝖎𝖓𝖐𝖘🔍")
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
         # create download directory, if not exist
@@ -198,17 +198,17 @@ async def g_yt_playlist(client, message):
         if user_command == GPYTDL_COMMAND.lower():
             is_cloud = True
     else:
-        await message.reply_text("👺𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙👺", quote=True)
+        await message.reply_text("💩𝑵𝒐 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒗𝒊𝒅𝒆𝒅💩", quote=True)
         return
     if "youtube.com/playlist" in url:
         i_m_sefg = await message.reply_text(
-            f"<a href='tg://user?id={usr_id}'>⏯ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙏𝙝𝙚 𝙔𝙤𝙪𝙩𝙪𝙗𝙚 𝙋𝙡𝙖𝙮𝙡𝙞𝙨𝙩 𝙛𝙤𝙧 𝙮𝙤𝙪 ⚡</a>",
+            f"<a href='tg://user?id={usr_id}'>⏯ 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝙵𝚛𝚘𝚖 𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙿𝚕𝚊𝚢𝚕𝚒𝚜𝚝 ⚡</a>",
             parse_mode="html",
         )
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
 
     else:
-        await message.reply_text("𝙔𝙤𝙪𝙏𝙪𝙗𝙚 𝙥𝙡𝙖𝙮𝙡𝙞𝙨𝙩 𝙡𝙞𝙣𝙠 𝙤𝙣𝙡𝙮🙄", quote=True)
+        await message.reply_text("𝒀𝒐𝒖𝑻𝒖𝒃𝒆 𝑷𝒍𝒂𝒚𝒍𝒊𝒔𝒕 𝑳𝒊𝒏𝒌 𝑶𝒏𝒍𝒚🤬", quote=True)
 
 
 #
@@ -228,14 +228,14 @@ async def g_clonee(client, message):
         await gclone.link_gen_size()
     else:
         await message.reply_text(
-            "🤓𝙔𝙤𝙪 𝙨𝙝𝙤𝙪𝙡𝙙 𝙧𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙢𝙚𝙨𝙨𝙖𝙜𝙚, 𝙬𝙝𝙞𝙘𝙝 𝙛𝙤𝙧𝙢𝙖𝙩 𝙨𝙝𝙤𝙪𝙡𝙙 𝙗𝙚 [𝙄𝘿 𝙤𝙛 𝙂𝙙𝙧𝙞𝙫𝙚 𝙛𝙞𝙡𝙚/𝙛𝙤𝙡𝙙𝙚𝙧 𝙉𝙖𝙢𝙚 𝙤𝙛 𝙩𝙝𝙚 𝙛𝙞𝙡𝙚/𝙛𝙤𝙡𝙙𝙚𝙧]🤓"
+            "🤓𝒀𝒐𝒖 𝑺𝒉𝒐𝒖𝒍𝒅 𝑹𝒆𝒑𝒍𝒚 𝑻𝒐 𝒂 𝑴𝒆𝒔𝒔𝒆𝒈𝒆 𝑾𝒉𝒊𝒄𝒉 𝑭𝒐𝒓𝒎𝒂𝒕 𝑺𝒉𝒐𝒖𝒍𝒅 𝑩𝒆 [𝖨𝖣 𝗈𝖿 𝖦-𝖣𝗋𝗂𝗏𝖾 𝖿𝗂𝗅𝖾/𝖿𝗈𝗅𝖽𝖾𝗋 𝗇𝖺𝗆𝖾 𝗈𝖿 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾/𝖿𝗈𝗅𝖽𝖾𝗋]🤓"
         )
 
 
 async def rename_tg_file(client, message):
     usr_id = message.from_user.id
     if not message.reply_to_message:
-        await message.reply("👺𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙👺", quote=True)
+        await message.reply("💩𝑵𝒐 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒗𝒊𝒅𝒆𝒅💩", quote=True)
         return
     if len(message.command) > 1:
         new_name = (
@@ -264,7 +264,7 @@ async def rename_tg_file(client, message):
                 message_id = final_response[key_f_res_se]
                 channel_id = str(message.chat.id)[4:]
                 private_link = f"https://t.me/c/{channel_id}/{message_id}"
-                message_to_send += "📦⬤ <a href='"
+                message_to_send += "👉 <a href='"
                 message_to_send += private_link
                 message_to_send += "'>"
                 message_to_send += local_file_name
@@ -274,10 +274,10 @@ async def rename_tg_file(client, message):
                 mention_req_user = (
                     f"<a href='tg://user?id={usr_id}'>🤗DONE📤</a>\n\n"
                 )
-                message_to_send = message_to_send = f"\n<code>{str(file.name)}</code>\n<b>📦 𝙏𝙤𝙩𝙖𝙡 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {file.total_length_string()}</b>\n\n" + message_to_send 
+                message_to_send = message_to_send = f"\n<code>{str(file.name)}</code>\n<b>💾 𝕿𝖔𝖙𝖆𝖑 𝕱𝖎𝖑𝖊 𝕾𝖎𝖟𝖊: {file.total_length_string()}</b>\n\n" + message_to_send 
                 message_to_send = message_to_send + "\n\n" + mention_req_user + f"<b>⭐#uploads⛳</b>"
             else:
-                message_to_send = "<i>🔴𝙁𝘼𝙄𝙇𝙀𝘿❌</i> 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙 𝙛𝙞𝙡𝙚𝙨.😔"
+                message_to_send = "<i>🔴Failed❌</i> 𝐭𝐨 𝐮𝐩𝐥𝐨𝐚𝐝 𝐟𝐢𝐥𝐞𝐬.😔"
             await message.reply_text(
                 text=message_to_send, quote=True, disable_web_page_preview=True
             )
@@ -286,5 +286,5 @@ async def rename_tg_file(client, message):
 
     else:
         await message.reply_text(
-            "🖋𝙋𝙧𝙤𝙫𝙞𝙙𝙚 𝙣𝙚𝙬 𝙣𝙖𝙢𝙚 𝙤𝙛 𝙩𝙝𝙚 𝙛𝙞𝙡𝙚 𝙬𝙞𝙩𝙝 𝙚𝙭𝙩𝙚𝙣𝙨𝙞𝙤𝙣 😐", quote=True
+            "🖋𝒑𝒓𝒐𝒗𝒊𝒅𝒆 𝒏𝒆𝒘 𝒏𝒂𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝒇𝒊𝒍𝒆 𝒘𝒊𝒕𝒉 𝒆𝒙𝒕𝒆𝒏𝒔𝒊𝒐𝒏 📚", quote=True
         )

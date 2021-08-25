@@ -80,14 +80,14 @@ async def status_message_f(client, message):
     free = humanbytes(free)
 
     ms_g = (
-        f'<b>╭───「  ⭕️ BOT STATISTICS ⭕️  」</b>\n' \
+        f'<b>╭───「🤖 BOT STATISTICS 🤖️」</b>\n' \
         f'<b>│</b>\n' \
         f"<b>├  ⏰ Bot Uptime : {hr} : {mi} : {se}</b>\n" \
         f'<b>├  💾 Total Disk Space : {total}</b>\n' \
         f'<b>├  📀 Total Used Space : {used}</b>\n' \
         f'<b>├  💿 Total Free Space : {free}</b>\n' \
         f'<b>│</b>\n' \
-        f'<b>╰───「 🚸 TorrentLeechX 🚸 」</b>'
+        f'<b>╰───「 🚸 Root Gamer YT 🚸 」</b>'
     )
     # LOGGER.info(ms_g)
 
@@ -164,7 +164,7 @@ async def exec_message_f(client, message):
 
 
 async def upload_document_f(client, message):
-    imsegd = await message.reply_text("processing ...")
+    imsegd = await message.reply_text("🤖processing ...")
     if message.from_user.id in AUTH_CHANNEL:
         if " " in message.text:
             recvd_command, local_file_name = message.text.split(" ", 1)
