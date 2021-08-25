@@ -132,7 +132,7 @@ class CloneHelper:
                 )
             button_markup = pyrogram.InlineKeyboardMarkup(button)
             msg = await self.lsg.edit_text(
-                f"🤖: {_up} 𝙘𝙡𝙤𝙣𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙞𝙣 𝙮𝙤𝙪𝙧 𝘾𝙡𝙤𝙪𝙙 \n\n<a href='tg://user?id={self.u_id}'>#Cloned To Team Drive ✅</a>\
+                f"🤖: {_up} ❁Cloned Successfuly To G-Drive❁ \n\n<a href='tg://user?id={self.u_id}'>#Cloned To Team Drive ✅</a>\
                 \n\n📀 Info: Calculating...",
                 reply_markup=button_markup,
                 parse_mode="html",
@@ -153,14 +153,14 @@ class CloneHelper:
             LOGGER.info(am.decode("utf-8"))
             await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
             await msg.edit_text(
-                f"🤖: {_up} 𝙘𝙡𝙤𝙣𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙞𝙣 𝙮𝙤𝙪𝙧 𝘾𝙡𝙤𝙪𝙙 \n\n<a href='tg://user?id={self.u_id}'>#Cloned To Team Drive ✅</a>\
+                f"🤖: {_up} ❁Cloned Successfuly To G-Drive❁ \n\n<a href='tg://user?id={self.u_id}'>#Cloned To Team Drive ✅</a>\
                 \n\n📀 Info:\n{g_autam}",
                 reply_markup=button_markup,
                 parse_mode="html",
             )
 
     async def gcl(self):
-        self.lsg = await self.mess.reply_text(f"𝘾𝙡𝙤𝙣𝙞𝙣𝙜...𝙮𝙤𝙪 𝙨𝙝𝙤𝙪𝙡𝙙 𝙬𝙖𝙞𝙩 😀")
+        self.lsg = await self.mess.reply_text(f"ᴄʟᴏɴɪɴɢ 🤟 ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ 😀")
         destination = f"{DESTINATION_FOLDER}"
         idd = "{" f"{self.g_id}" "}"
         cmd = [

@@ -94,9 +94,9 @@ async def upload_to_tg(
             LOGGER.info("TODO")
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
-                "𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙎𝙪𝙥𝙥𝙤𝙧𝙩𝙨 2𝙂𝘽 𝙈𝙖𝙭\n"
-                f"\n𝘿𝙚𝙩𝙚𝙘𝙩𝙚𝙙 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {d_f_s} 📚\n"
-                "\n🤖𝙩𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙨𝙥𝙡𝙞𝙩 𝙩𝙝𝙚 𝙛𝙞𝙡𝙚𝙨🌝🗜️"
+                "𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎 𝑺𝒖𝒑𝒑𝒐𝒓𝒕𝒔 2𝑮𝑩 𝑴𝒂𝒙\n"
+                f"\n𝑫𝒆𝒕𝒆𝒄𝒕𝒆𝒅 𝑭𝒊𝒍𝒆 𝑺𝒊𝒛𝒆: {d_f_s} 📚\n"
+                "\n🤖𝚂𝚙𝚕𝚒𝚝𝚝𝚒𝚗𝚐 𝙵𝚒𝚕𝚎𝚜🗜️"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -105,9 +105,9 @@ async def upload_to_tg(
             LOGGER.info(totlaa_sleif)
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
-                f"𝘿𝙚𝙩𝙚𝙘𝙩𝙚𝙙 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {d_f_s} 💿\n"
-                f"\n<code>{ba_se_file_name}</code> 𝙨𝙥𝙡𝙞𝙩𝙩𝙚𝙙 𝙞𝙣𝙩𝙤 {number_of_files} 𝙛𝙞𝙡𝙚𝙨.\n"
-                "\n📤𝙩𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙 𝙩𝙤 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢, 𝙣𝙤𝙬 🛫"
+                f"𝑫𝒆𝒕𝒆𝒄𝒕𝒆𝒅 𝑭𝒊𝒍𝒆 𝑺𝒊𝒛𝒆: {d_f_s} 💿\n"
+                f"\n<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
+                "\n📤𝕌𝕡𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕋𝕠 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 🛫"
             )
             for le_file in totlaa_sleif:
                 # recursion: will this FAIL somewhere?
@@ -147,7 +147,7 @@ async def upload_to_tg(
 async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
     await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
     del_it = await message.edit_text(
-        f"<a href='tg://user?id={g_id}'>📤𝙉𝙤𝙬 𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙩𝙤 ☁️ 𝘾𝙡𝙤𝙪𝙙!!🛫</a>"
+        f"<a href='tg://user?id={g_id}'>📤𝑼𝒑𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑻𝒐 𝑮-𝑫𝒓𝒊𝒗𝒆🛫</a>"
     )
     if not os.path.exists("rclone.conf"):
         with open("rclone.conf", "w+", newline="\n", encoding="utf-8") as fole:
@@ -340,7 +340,7 @@ async def upload_single_file(
         message_for_progress_display = message
         if not edit_media:
             message_for_progress_display = await message.reply_text(
-                "📤𝙨𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙪𝙥𝙡𝙤𝙖𝙙 𝙤𝙛 {}📦".format(
+                "📤𝑺𝒕𝒂𝒓𝒕𝒊𝒏𝒈 𝑼𝒑𝒍𝒐𝒂𝒅 𝒐𝒇 {}📦".format(
                     os.path.basename(local_file_name))
             )
         prog = Progress(from_user, client, message_for_progress_display)
@@ -371,7 +371,7 @@ async def upload_single_file(
             message_for_progress_display = message
             if not edit_media:
                 message_for_progress_display = await message.reply_text(
-                    "📤𝙨𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙪𝙥𝙡𝙤𝙖𝙙 𝙤𝙛 {}📦".format(
+                    "📤𝑺𝒕𝒂𝒓𝒕𝒊𝒏𝒈 𝑼𝒑𝒍𝒐𝒂𝒅 𝒐𝒇 {}📦".format(
                         os.path.basename(local_file_name))
                 )
                 prog = Progress(from_user, client,
@@ -564,7 +564,7 @@ async def upload_single_file(
             time.sleep(g.x)
         except Exception as e:
             LOGGER.info(e)
-            await message_for_progress_display.edit_text("**🔴𝙁𝘼𝙄𝙇𝙀𝘿**\n" + str(e))
+            await message_for_progress_display.edit_text("**🚫𝙁𝘼𝙄𝙇𝙀𝘿**\n" + str(e))
             LOGGER.exception(e)
         else:
             if message.message_id != message_for_progress_display.message_id:
