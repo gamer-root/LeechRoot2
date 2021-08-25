@@ -51,7 +51,7 @@ async def down_load_media_f(client, message):
                 f"⏬Downloaded to <code>{the_real_download_location}</code> 𝙞𝙣 <u>{ms}</u> seconds🛬"
             )
         else:
-            await mess_age.edit_text("🚫𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖢𝖺𝗇𝖼𝖾𝗅𝗅𝖾𝖽🚫")
+            await mess_age.edit_text("𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖢𝖺𝗇𝖼𝖾𝗅𝗅𝖾𝖽🤒")
             return
         the_real_download_location_g = the_real_download_location
         if user_command == TELEGRAM_LEECH_UNZIP_COMMAND.lower():
@@ -103,5 +103,6 @@ async def download_tg(client, message):
                 f"⏬Downloaded to <code>{the_real_download_location}</code> 𝙞𝙣 <u>{ms}</u> seconds🛬"
             )
         else:
-            await mess_age.edit_text("🚫𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖢𝖺𝗇𝖼𝖾𝗅𝗅𝖾𝖽🚫return
+            await mess_age.edit_text("𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖢𝖺𝗇𝖼𝖾𝗅𝗅𝖾𝖽🤒")
+            return
     return the_real_download_location, mess_age
