@@ -272,10 +272,10 @@ async def rename_tg_file(client, message):
                 message_to_send += "\n"
             if message_to_send != "":
                 mention_req_user = (
-                    f"<a href='tg://user?id={usr_id}'>🤗DONE📤</a>\n\n"
+                    f"<a href='tg://user?id={usr_id}'>ROOT GAMER [MIRROR]</a>\n\n"
                 )
                 message_to_send = message_to_send = f"\n<code>{str(file.name)}</code>\n<b>💾 𝕿𝖔𝖙𝖆𝖑 𝕱𝖎𝖑𝖊 𝕾𝖎𝖟𝖊: {file.total_length_string()}</b>\n\n" + message_to_send 
-                message_to_send = message_to_send + "\n\n" + mention_req_user + f"<b>⭐#uploads⛳</b>"
+                message_to_send = message_to_send + "\n\n" + mention_req_user + f"<b>⭐Uploaded Files👆</b>"
             else:
                 message_to_send = "<i>🔴Failed❌</i> 𝐭𝐨 𝐮𝐩𝐥𝐨𝐚𝐝 𝐟𝐢𝐥𝐞𝐬.😔"
             await message.reply_text(
