@@ -198,7 +198,7 @@ async def call_apropriate_function(
                 aria_instance, err_message, sent_message_to_update_tg_p, None
             )
         else:
-            return False, "🔴𝒄𝒂𝒏'𝒕 𝒈𝒆𝒕 𝒎𝒆𝒕𝒂𝒅𝒂𝒕𝒂 \n\n#DeadTorrent⚰️"
+            return False, "🔴𝖈𝖆𝖓'𝖙 𝖌𝖊𝖙 𝖒𝖊𝖙𝖆𝖉𝖆𝖙𝖆 \n\n#DeadTorrent⚰️"
     await asyncio.sleep(1)
     file = aria_instance.get_download(err_message)
     to_upload_file = file.name
@@ -218,7 +218,7 @@ async def call_apropriate_function(
         except Exception as ge:
             LOGGER.info(ge)
             LOGGER.info(
-                f"😐𝒄𝒂𝒏'𝒕 𝒆𝒙𝒕𝒓𝒂𝒄𝒕 {os.path.basename(to_upload_file)}, 𝒖𝒑𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝒕𝒉𝒆 𝒔𝒂𝒎𝒆 𝒇𝒊𝒍𝒆😐"
+                f"😐𝔠𝔞𝔫'𝔱 𝔢𝔵𝔱𝔯𝔞𝔠𝔱 {os.path.basename(to_upload_file)}, 𝔲𝔭𝔩𝔬𝔞𝔡𝔦𝔫𝔤 𝔱𝔥𝔢 𝔰𝔞𝔪𝔢 𝔣𝔦𝔩𝔢😐"
             )
 
     if to_upload_file:
@@ -271,7 +271,7 @@ async def call_apropriate_function(
                         f"\n<a href='tg://user?id={user_id}'>🤗DONE📤</a>\n"
                     )
                     message_to_send = f"\n<code>{str(file.name)}</code>\n<b>🖥 𝘵𝘰𝘵𝘢𝘭 𝘧𝘪𝘭𝘦 𝘴𝘪𝘻𝘦: {file.total_length_string()}</b>\n\n" + message_to_send 
-                    message_to_send = message_to_send + "\n\n" + mention_req_user + f"<b>⭐ROOT GAMER YT 🔞</b>"
+                    message_to_send = message_to_send + "\n\n" + mention_req_user + f"<b>⭐#uploads⛳</b>"
                 else:
                     message_to_send = "<i>🔴𝑭𝒂𝒊𝒍𝒆𝒅</i> 𝘛𝘰 𝘶𝘱𝘭𝘰𝘢𝘥 𝘧𝘪𝘭𝘦𝘴😞"
                 await user_message.reply_text(
