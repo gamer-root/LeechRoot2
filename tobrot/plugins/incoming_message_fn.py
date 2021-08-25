@@ -70,7 +70,7 @@ async def incoming_message_f(client, message):
         await i_m_sefg.edit("💩𝑵𝒐 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒗𝒊𝒅𝒆𝒅💩")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("🔎𝕰𝖝𝖙𝖗𝖆𝖈𝖙𝖎𝖓𝖌 𝕷𝖎𝖓𝖐𝖘🔍")
+        await i_m_sefg.edit_text("🔎𝑬𝒙𝒕𝒓𝒂𝒄𝒕𝒊𝒏𝒈 𝑳𝒊𝒏𝒌𝒔🔍")
         # start the aria2c daemon
         aria_i_p = await aria_start()
         # LOGGER.info(aria_i_p)
@@ -82,7 +82,7 @@ async def incoming_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("⚡𝕯𝖔𝖜𝖓𝖑𝖔𝖆𝖉𝖎𝖓𝖌⚡")
+        await i_m_sefg.edit_text("⚡𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈⚡")
         # try to download the "link"
         is_zip = False
         is_cloud = False
@@ -150,7 +150,7 @@ async def incoming_youtube_dl_f(client, message):
         await i_m_sefg.edit("💩𝑵𝒐 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒗𝒊𝒅𝒆𝒅💩")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("🔎𝕰𝖝𝖙𝖗𝖆𝖈𝖙𝖎𝖓𝖌 𝕷𝖎𝖓𝖐𝖘🔍")
+        await i_m_sefg.edit_text("🔎𝑬𝒙𝒕𝒓𝒂𝒄𝒕𝒊𝒏𝒈 𝑳𝒊𝒏𝒌𝒔🔍")
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
         # create download directory, if not exist
@@ -274,7 +274,7 @@ async def rename_tg_file(client, message):
                 mention_req_user = (
                     f"<a href='tg://user?id={usr_id}'>🤗DONE📤</a>\n\n"
                 )
-                message_to_send = message_to_send = f"\n<code>{str(file.name)}</code>\n<b>💾 𝕿𝖔𝖙𝖆𝖑 𝕱𝖎𝖑𝖊 𝕾𝖎𝖟𝖊: {file.total_length_string()}</b>\n\n" + message_to_send 
+                message_to_send = message_to_send = f"\n<code>{str(file.name)}</code>\n<b>💾 𝑻𝒐𝒕𝒂𝒍 𝑭𝒊𝒍𝒆 𝑺𝒊𝒛𝒆: {file.total_length_string()}</b>\n\n" + message_to_send 
                 message_to_send = message_to_send + "\n\n" + mention_req_user + f"<b>⭐#uploads⛳</b>"
             else:
                 message_to_send = "<i>🔴Failed❌</i> 𝐭𝐨 𝐮𝐩𝐥𝐨𝐚𝐝 𝐟𝐢𝐥𝐞𝐬.😔"
